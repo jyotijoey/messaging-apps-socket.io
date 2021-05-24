@@ -1,4 +1,4 @@
-const user =[]
+const users =[]
 
 const addUser = ({id, name, room}) => {
     // change name to lowercase and trim spaces
