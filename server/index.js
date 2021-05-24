@@ -18,7 +18,12 @@ const io = socketio(server, {cors: {
 
 
 io.on("connection", (socket) => {
-    console.log("connected", socket);
+    console.log("connected");
+
+    socket.on("join", ({name, room}, callback) => {
+        
+        console.log(callback);
+    })
     socket.on("disconnect", () => {
         console.log("User has left");
     })
